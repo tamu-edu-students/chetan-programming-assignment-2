@@ -3,4 +3,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  Rails.application.routes.draw do
+    resources :movies
+    root :to => redirect('/movies')
+  end
 end
